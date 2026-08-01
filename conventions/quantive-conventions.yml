@@ -1,0 +1,31 @@
+generated: 2026-07-20
+method: searched
+source: https://www.workboard.com/developer
+api: WorkBoard REST API (Quantive)
+notes: >-
+  Cross-cutting runtime semantics for the WorkBoard REST API v1.0 (successor to
+  the Quantive Results / Gtmhub API). Captured from the public developer docs. No
+  OpenAPI is published, so idempotency, pagination, and error-envelope shapes are
+  not formally documented and are recorded as unknown rather than invented.
+auth:
+  style: bearer-token
+  header: Authorization
+  schemes: [oauth2-authorization-code, instant-token]
+  see: authentication/quantive-authentication.yml
+transport:
+  https_required: true
+  protocol: REST/JSON
+versioning:
+  style: uri-or-implicit
+  current: v1.0
+  see: lifecycle/quantive-lifecycle.yml
+idempotency:
+  documented: false
+pagination:
+  documented: false
+rate_limiting:
+  documented: false
+error_envelope:
+  documented: false
+request_id:
+  documented: false

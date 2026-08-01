@@ -1,0 +1,32 @@
+generated: 2026-07-20
+method: probed
+source: HTTP probes of provider hosts
+notes: >-
+  Probed the well-known surface of Quantive/WorkBoard hosts. quantive.com (and its
+  paths) 302-redirect to workboard.com since the 2025 merger, so no well-known
+  files resolve on the Quantive domain. No well-known documents were found on the
+  WorkBoard hosts either. Absence is valid, expected data.
+probed: '2026-07-20'
+hosts:
+- host: quantive.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 302
+    redirect: https://www.workboard.com/
+    file: null
+- host: www.workboard.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+- host: www.myworkboard.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null

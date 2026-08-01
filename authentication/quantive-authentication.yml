@@ -1,0 +1,41 @@
+generated: 2026-07-20
+method: searched
+source: https://www.workboard.com/developer
+api: WorkBoard REST API (Quantive)
+notes: >-
+  Quantive (formerly Gtmhub) merged into WorkBoard; the live developer surface is
+  the WorkBoard REST API v1.0. Auth details captured verbatim from the public
+  WorkBoard developer documentation. No OpenAPI specification is published, so this
+  profile is search-derived from the docs rather than spec-derived.
+schemes:
+- id: oauth2-authorization-code
+  type: oauth2
+  flow: authorization_code
+  description: >-
+    Recommended for multi-user applications. Register an app, obtain an
+    authorization code, exchange it for an access token, and pass the token as a
+    bearer credential in the Authorization header. Access tokens are valid for
+    one year.
+  endpoints:
+    authorization: https://www.myworkboard.com/wb/oauth/authorize
+    token: https://www.myworkboard.com/wb/oauth/token
+    revocation: https://www.myworkboard.com/wb/oauth/revoke/
+  scopes:
+  - all
+  in: header
+  header: Authorization
+  token_format: Bearer
+- id: instant-token
+  type: apiKey
+  description: >-
+    Instant Token Authentication issues an access token with a single click from
+    the WorkBoard app-management portal. Intended for testing or single-user
+    applications. Passed as a bearer credential in the Authorization header.
+  in: header
+  header: Authorization
+  token_format: Bearer
+  issued_at: https://www.myworkboard.com/wb/user/profile/edit?do=mgApp
+transport:
+  https_required: true
+app_registration: https://www.myworkboard.com/wb/user/profile/edit?do=mgApp
+docs: https://www.workboard.com/developer

@@ -1,0 +1,17 @@
+generated: 2026-07-20
+method: searched
+source: https://www.workboard.com/developer
+api: WorkBoard REST API (Quantive)
+docs: https://www.workboard.com/developer
+flow: authorization_code
+notes: >-
+  The WorkBoard REST API v1.0 documents a single coarse OAuth scope. No
+  fine-grained scope taxonomy is published, and no OpenAPI declares per-operation
+  scopes, so this is the complete documented set.
+scopes:
+- name: all
+  description: >-
+    Default scope value granting full access consistent with the authorizing
+    user's permissions. Documented as the default value for the scope parameter
+    in WorkBoard API v1.0.
+  default: true

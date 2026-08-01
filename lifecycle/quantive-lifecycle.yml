@@ -1,0 +1,29 @@
+generated: 2026-07-20
+method: searched
+source: https://www.workboard.com/developer
+api: WorkBoard REST API (Quantive)
+versioning:
+  scheme: single-version
+  current: v1.0
+  notes: >-
+    The public WorkBoard developer documentation references API v1.0 as the
+    current version. No dated changelog, deprecation policy, or Sunset/Deprecation
+    header (RFC 8594) convention is published on the developer pages.
+tokens:
+  access_token_validity: 1 year (OAuth 2.0 access tokens)
+  revocation_endpoint: https://www.myworkboard.com/wb/oauth/revoke/
+deprecation_policy:
+  published: false
+status_page:
+  published: false
+  notes: >-
+    No public status page was found for the WorkBoard / Quantive developer API at
+    the time of enrichment.
+history:
+  - date: '2021'
+    event: Gtmhub rebranded to Quantive.
+  - date: '2025'
+    event: >-
+      Quantive merged into WorkBoard; quantive.com redirects to workboard.com and
+      Quantive becomes a WorkBoard, Inc. trademark. WorkBoard REST API v1.0 is the
+      successor developer surface.

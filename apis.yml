@@ -1,8 +1,28 @@
 aid: quantive
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quantive.png
 name: Quantive
-description: 'Quantive is a company surfaced as a portfolio company of index-ventures, techstars and added
-  to the API Evangelist network as a stub for enrichment. Sector: business-applications. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  Quantive is a strategy-execution and OKR (Objectives and Key Results) software
+  company, originally launched as Gtmhub and rebranded to Quantive in 2021. Its
+  flagship product, Quantive Results, helps organizations set, align, track, and
+  report on goals and outcomes with dashboards, insights, and integrations. In
+  2025 Quantive merged into WorkBoard and the Quantive name became a WorkBoard,
+  Inc. trademark; the quantive.com domain now redirects to workboard.com, and the
+  live developer surface is the WorkBoard REST API v1.0 (OAuth 2.0 plus an
+  instant-token flow) hosted on myworkboard.com. Quantive was surfaced through the
+  Index Ventures and Techstars portfolios and added to the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/quantive/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +31,67 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-note: >-
+  Quantive (formerly Gtmhub) merged into WorkBoard in 2025; quantive.com redirects
+  to workboard.com and "Quantive" is now a WorkBoard, Inc. trademark. API artifacts
+  describe the live WorkBoard REST API v1.0, which is the successor developer
+  surface for the former Quantive Results / Gtmhub API.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
 tags:
 - Company
 - Business Applications
-apis: []
+- OKR
+- Strategy Execution
+- Goal Management
+- Performance Management
+- SaaS
+apis:
+- name: WorkBoard REST API (Quantive)
+  description: >-
+    RESTful API v1.0 for the WorkBoard / Quantive strategy-execution platform.
+    Supports OAuth 2.0 (authorization-code) for multi-user apps and an
+    instant-token flow for single-user or testing scenarios. All requests are
+    HTTPS and carry a bearer access token in the Authorization header; OAuth
+    access tokens are valid for one year. Registered apps use the "all" scope.
+  humanURL: https://www.workboard.com/developer
+  baseURL: https://www.myworkboard.com
+  tags:
+  - OKR
+  - Strategy Execution
+  - Goal Management
+  properties:
+  - type: Authentication
+    url: authentication/quantive-authentication.yml
+  - type: OAuthScopes
+    url: scopes/quantive-scopes.yml
+  - type: Lifecycle
+    url: lifecycle/quantive-lifecycle.yml
+  - type: Conventions
+    url: conventions/quantive-conventions.yml
+  - type: SignUp
+    url: https://www.myworkboard.com/wb/user/profile/edit?do=mgApp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/quantive-domain-security.yml
 - type: Website
   url: https://quantive.com/
+- type: DeveloperPortal
+  url: https://www.workboard.com/developer
+- type: Documentation
+  url: https://www.workboard.com/developer
+- type: Login
+  url: https://www.myworkboard.com/
+- type: WellKnown
+  url: well-known/quantive-well-known.yml
