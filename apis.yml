@@ -36,7 +36,7 @@ x-note: >-
   to workboard.com and "Quantive" is now a WorkBoard, Inc. trademark. API artifacts
   describe the live WorkBoard REST API v1.0, which is the successor developer
   surface for the former Quantive Results / Gtmhub API.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 x-enrichment:
