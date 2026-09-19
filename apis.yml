@@ -59,7 +59,7 @@ x-enrichment:
 tags:
 - Company
 - Business Applications
-- OKR
+- OKRs
 - Strategy Execution
 - Goal Management
 - Performance Management
@@ -83,6 +83,10 @@ apis:
   humanURL: https://www.workboard.com/developer
   baseURL: https://www.myworkboard.com
   tags:
+  - OKRs
+  - Strategy Execution
+  - Goal Management
+  tags_raw:
   - OKR
   - Strategy Execution
   - Goal Management
