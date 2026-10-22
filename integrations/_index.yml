@@ -98,3 +98,16 @@
     sector: business-applications
   status: not-a-workflow
   arazzo: null
+- slug: quantive-miro-own
+  label: Miro (own)
+  partner: miro
+  partner_name: Miro (own)
+  category: Miro app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://miro.com/marketplace/quantive/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
